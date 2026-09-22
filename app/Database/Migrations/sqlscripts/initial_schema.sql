@@ -81,6 +81,9 @@ INSERT INTO `ospos_app_config` (`key`, `value`) VALUES
     ('receipt_template', 'receipt_default'),
     ('theme', 'flatly'),
     ('statistics', '1'),
+    ('customer_reward_points_value', '1'),
+    ('customer_reward_min_redeem_points', '0'),
+    ('customer_reward_max_redeem_percent', '0'),
     ('language', 'english'),
     ('language_code', 'en');
 
