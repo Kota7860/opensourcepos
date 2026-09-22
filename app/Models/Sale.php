@@ -5,6 +5,7 @@ namespace App\Models;
 use CodeIgniter\Database\BaseBuilder;
 use CodeIgniter\Database\ResultInterface;
 use CodeIgniter\Model;
+use App\Libraries\Reward_lib;
 use App\Libraries\Sale_lib;
 use Config\OSPOS;
 use ReflectionException;
@@ -1399,7 +1400,8 @@ class Sale extends Model
             if (! empty($packageId)) {
                 $pointsPercent     = $customerRewards->get_points_percent($packageId);
                 $pointsPercent     = ($pointsPercent === null ? 0 : $pointsPercent);
-                $totalAmountEarned = ($total_amount * $pointsPercent / 100);
+                $rewardLib         = new Reward_lib($config);
+                $totalAmountEarned = $rewardLib->calculate_points_earned((float) $total_amount, (float) $pointsPercent);
 
                 $customer->adjustRewardPoints($customer_id, $totalAmountEarned);
 

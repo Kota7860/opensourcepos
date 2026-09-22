@@ -59,6 +59,10 @@ Options All -Indexes
 ServerSignature Off
 # Disable server signature end
 
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
 <IfModule mod_expires.c>
   <FilesMatch "\.(jpe?g|png|gif|js|css)$">
     ExpiresActive On

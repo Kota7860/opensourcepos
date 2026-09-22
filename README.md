@@ -68,6 +68,17 @@ This application can be set up in _many_ different ways and we only support the 
 
 For more information and recommendations on support hardware, like receipt printers and barcode scanners, read [this page](https://github.com/opensourcepos/opensourcepos/wiki/Supported-hardware-datasheet) on our wiki.
 
+## 📱 Install on Mobile
+
+OSPOS is a Progressive Web App (PWA), so you can install it on a phone or tablet and launch it fullscreen from the home screen — no app store required.
+
+**Requirement:** the site must be served over **HTTPS** (or `http://localhost` for local testing). Install is not offered over plain `http://`.
+
+- **Android (Chrome):** open your OSPOS URL, then tap the browser menu (⋮) → **Install app** / **Add to Home screen**. A prompt may also appear automatically.
+- **iPhone / iPad (Safari):** open your OSPOS URL, tap the **Share** button, then **Add to Home Screen**.
+
+Once installed, OSPOS launches in its own window with the app icon and shows an offline message if the network is unavailable.
+
 ## ✨ Contributing
 
 Everyone is more than welcome to help us improve this project. If you think you've got something to help us go forward, feel free to open a [pull request]() or join the conversation on [Element](https://app.gitter.im/#/room/#opensourcepos_Lobby:gitter.im).
